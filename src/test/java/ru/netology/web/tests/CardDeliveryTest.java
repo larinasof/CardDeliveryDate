@@ -1,4 +1,5 @@
 package ru.netology.web.tests;
+import static ru.netology.web.data.DataGenerator.*;
 
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,12 +13,12 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CardDeliveryTest {
-    public String city = DataGenerator.getCity();
-    public String currentDate = DataGenerator.getCurrentDate();
-    public String date = DataGenerator.getDate();
-    public String newDate = DataGenerator.getNewDate();
-    public String name = DataGenerator.getName();
-    public String phone = DataGenerator.getPhone();
+    public String city = getCity();
+    public String currentDate = getDate(0);
+    public String date = getDate(3);
+    public String newDate = getDate(10);
+    public String name = getName();
+    public String phone = getPhone();
 
     SelenideElement form = $("#root");
 
